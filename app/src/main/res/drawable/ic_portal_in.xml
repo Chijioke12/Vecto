@@ -1,0 +1,45 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Outer energy cloud -->
+    <path
+        android:pathData="M24,24m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0"
+        android:fillColor="#1500C8FF"/>
+    <!-- Portal Shell -->
+    <path
+        android:pathData="M24,24m-18,0a18,18 0,1 1,36 0a18,18 0,1 1,-36 0"
+        android:strokeWidth="2.5"
+        android:strokeColor="#FF0088FF"/>
+    <path
+        android:pathData="M24,24m-14,0a14,14 0,1 1,28 0a14,14 0,1 1,-28 0"
+        android:strokeWidth="1.5"
+        android:strokeColor="#FF00F0FF"
+        android:strokeLineJoin="round" />
+    <!-- Center swirling black hole -->
+    <path
+        android:pathData="M24,24m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="14"
+                android:startY="14"
+                android:endX="34"
+                android:endY="34"
+                android:type="radial"
+                android:gradientRadius="10">
+                <item android:offset="0.0" android:color="#FF002244" />
+                <item android:offset="0.7" android:color="#FF0055AA" />
+                <item android:offset="1.0" android:color="#FF00E1FF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Sparkling portals particle swirls -->
+    <path
+        android:pathData="M24,19l1,1.5l1.5,1l-1.5,1l-1,1.5l-1,-1.5l-1.5,-1l1.5,-1z"
+        android:fillColor="#FFFFFFFF"/>
+    <path
+        android:pathData="M32,28l0.5,1l1,0.5l-1,0.5l-0.5,1l-0.5,-1l-1,-0.5l1,-0.5z"
+        android:fillColor="#FF88FFFF"/>
+</vector>

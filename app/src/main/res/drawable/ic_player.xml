@@ -1,0 +1,51 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Glow Background -->
+    <path
+        android:pathData="M24,24m-18,0a18,18 0,1 1,36 0a18,18 0,1 1,-36 0"
+        android:fillColor="#1500F0FF"/>
+    <path
+        android:pathData="M24,24m-12,0a12,12 0,1 1,24 0a12,12 0,1 1,-24 0"
+        android:fillColor="#3300F2FE"/>
+    <!-- Outer Orbital Ring -->
+    <path
+        android:pathData="M24,4C12.95,4 4,12.95 4,24C4,35.05 12.95,44 24,44C35.05,44 44,35.05 44,24"
+        android:strokeWidth="1.5"
+        android:strokeColor="#FF00F0FF"
+        android:strokeLineCap="round"/>
+    <!-- Inner Core Body -->
+    <path
+        android:pathData="M24,10c-7.73,0 -14,6.27 -14,14s6.27,14 14,14s14,-6.27 14,-14S31.73,10 24,10z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="24"
+                android:startY="10"
+                android:endX="24"
+                android:endY="38"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FF00F5FF" />
+                <item android:offset="1.0" android:color="#FF0052D4" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Sci-fi Visor / Eye Glow -->
+    <path
+        android:pathData="M16,21C16,19.34 20,18  24,18C28,18 32,19.34 32,21C32,22.66 28,24 24,24C20,24 16,22.66 16,21Z"
+        android:fillColor="#FFFFFFFF"/>
+    <!-- Cute Visor Highlight -->
+    <path
+        android:pathData="M20,20.5h8v1h-8z"
+        android:fillColor="#FF00F0FF"/>
+    <!-- Thruster nozzle or connection at bottom -->
+    <path
+        android:pathData="M20,36h8v3h-8z"
+        android:fillColor="#FF4364F7"/>
+    <!-- Spark / Energy Star in Core -->
+    <path
+        android:pathData="M24,28l1.5,2.5l2.5,1.5l-2.5,1.5l-1.5,2.5l-1.5,-2.5l-2.5,-1.5l2.5,-1.5z"
+        android:fillColor="#FFFFFFFF"/>
+</vector>

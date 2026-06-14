@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Starburst portal emission -->
+    <path
+        android:pathData="M24,24l3,-12l3,12l12,3l-12,3l-3,12l-3,-12l-12,-3z"
+        android:fillColor="#33FFD700"/>
+    <!-- Outer Star Ring -->
+    <path
+        android:pathData="M24,2C11.85,2 2,11.85 2,24C2,36.15 11.85,46 24,46C36.15,46 46,36.15 46,24C46,11.85 36.15,2 24,2Z"
+        android:strokeWidth="2"
+        android:strokeColor="#FF6C00E0"/>
+    <!-- Middle Ring with Dash Pattern -->
+    <path
+        android:pathData="M24,7c9.39,0 17,7.61 17,17s-7.61,17 -17,17S7,33.39 7,24"
+        android:strokeWidth="1.5"
+        android:strokeColor="#FFA9FE00"
+        android:strokeLineCap="round"/>
+    <!-- Inner Portal Disc with Golden Gradient -->
+    <path
+        android:pathData="M24,12c-6.63,0 -12,5.37 -12,12s5.37,12 12,12s12,-5.37 12,-12S30.63,12 24,12z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="12"
+                android:startY="12"
+                android:endX="36"
+                android:endY="36"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FFE040FB" />
+                <item android:offset="0.5" android:color="#FF7C4DFF" />
+                <item android:offset="1.0" android:color="#FF00E5FF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Core Gate Core -->
+    <path
+        android:pathData="M24,17m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0"
+        android:fillColor="#FF000000"/>
+    <!-- Bright Center Spark -->
+    <path
+        android:pathData="M24,17m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"
+        android:fillColor="#FFFFFFFF"/>
+</vector>

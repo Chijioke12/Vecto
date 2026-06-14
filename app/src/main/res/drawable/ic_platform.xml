@@ -1,0 +1,52 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Solid Cyber Metallic Base -->
+    <path
+        android:pathData="M0,0h48v48h-48z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="0"
+                android:startY="0"
+                android:endX="48"
+                android:endY="48"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FF37474F" />
+                <item android:offset="1.0" android:color="#FF212121" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Top Chamfer Highlight -->
+    <path
+        android:pathData="M0,0h48v3h-48z"
+        android:fillColor="#FF78909C"/>
+    <!-- Bottom Bevel Shadow -->
+    <path
+        android:pathData="M0,45h48v3h-48z"
+        android:fillColor="#FF101010"/>
+    <!-- Cyber Diagonal Stripe Panels -->
+    <path
+        android:pathData="M8,12l8,-8h4l-8,8zm16,0l8,-8h4l-8,8zm-20,20l12,-12h4l-12,12zm16,0l12,-12h4l-12,12zm16,0l8,-8h4l-8,8z"
+        android:fillColor="#FF263238" />
+    <!-- Glowing active cyan power conduit dots -->
+    <path
+        android:pathData="M6,6h4v4h-4z"
+        android:fillColor="#FF00F5FF"/>
+    <path
+        android:pathData="M38,6h4v4h-4z"
+        android:fillColor="#FF00F5FF"/>
+    <path
+        android:pathData="M6,38h4v4h-4z"
+        android:fillColor="#FF00F5FF"/>
+    <path
+        android:pathData="M38,38h4v4h-4z"
+        android:fillColor="#FF00F5FF"/>
+    <!-- Center panel dividing line -->
+    <path
+        android:pathData="M12,24h24"
+        android:strokeWidth="1.5"
+        android:strokeColor="#FF455A64" />
+</vector>

@@ -1,0 +1,6 @@
+{
+  "name": "Vector Platformer",
+  "description": "A premium, physics-based retro cybernetic vector platformer with 11 custom-crafted levels, fluid physics, bouncing mechanics, micro-teleportation portals, stars tracking, and local progress savings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

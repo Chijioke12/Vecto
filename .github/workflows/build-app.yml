@@ -1,0 +1,59 @@
+name: Build Android App
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      - name: Grant Execute Permission to Gradlew
+        run: chmod +x gradlew
+
+      - name: Create Dummy Secrets File
+        # Some secrets configurations might expect files or variables to compile.
+        # Creating a dummy .env prevents potential build failures.
+        run: |
+          echo "GEMINI_API_KEY=dummy_key" > .env
+
+      - name: Run Unit Tests
+        # Run local unit tests (includes Robolectric tests)
+        # Using --no-configuration-cache to prevent serialization / cache problems
+        run: ./gradlew testDebugUnitTest --no-configuration-cache --no-daemon
+
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug --no-configuration-cache --no-daemon
+
+      - name: Upload Debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: VectorPlatformer-debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+
+      - name: Upload Test Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: app/build/reports/tests/testDebugUnitTest/
+          if-no-files-found: ignore

@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M0,0h108v108h-108z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="0"
+                android:startY="0"
+                android:endX="108"
+                android:endY="108"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FF100030" />
+                <item android:offset="0.5" android:color="#FF0D0D1E" />
+                <item android:offset="1.0" android:color="#FF050014" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Geometric decorative cyber matrix patterns -->
+    <path
+        android:pathData="M15,0L0,15M45,0L0,45M75,0L0,75M105,0L0,105M108,15L15,108M108,45L45,108M108,75L75,108"
+        android:strokeWidth="0.5"
+        android:strokeColor="#1F00E1FF" />
+</vector>
