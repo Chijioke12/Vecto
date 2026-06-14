@@ -26,6 +26,13 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
+      - name: Regenerate Gradle Wrapper
+        # If the checked-in wrapper jar was corrupted or modified in transit, 
+        # we pull a fresh, official gradle-wrapper.jar for version 9.3.1 using the system-installed Gradle.
+        run: |
+          rm -f gradle/wrapper/gradle-wrapper.jar
+          gradle wrapper --gradle-version 9.3.1
+
       - name: Grant Execute Permission to Gradlew
         run: chmod +x gradlew
 
